@@ -1,5 +1,8 @@
 # _Task Planner_
 
+## Contributors
+[S-Flavius](https://github.com/S-Flavius)
+
 ## Description
 A small console application where you can create, 
 track and delete any task you want.

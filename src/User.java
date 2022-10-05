@@ -30,10 +30,6 @@ public class User {
         this.PIN = PIN;
     }
 
-    public void greetingUser(String name){
-        System.out.println("Hello, " + name + "!");
-    }
-
     public void createTask(){
         Scanner in = new Scanner(System.in);
         System.out.printf("Task %d: ", Task.getTaskCount());
@@ -51,6 +47,7 @@ public class User {
         Scanner in = new Scanner(System.in);
         System.out.println("Which task do you want to mark as done?");
         int taskNumber = in.nextInt();
+        //TO DO this method
     }
 
     public void saveTask(String name){

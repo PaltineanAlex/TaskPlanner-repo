@@ -1,10 +1,8 @@
 public class Task {
     private static int taskCounter = 0;
-
     static {
         taskCounter++;
     }
-
     private String description;
     private boolean done;
 

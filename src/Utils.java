@@ -16,4 +16,8 @@ public class Utils {
                 2. Remove task
                 3. Delete task""");
     }
+
+    public void greeting(String name){
+        System.out.printf("Hello, %s. I hope you're having a great day so far!", name);
+    }
 }

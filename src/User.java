@@ -50,6 +50,12 @@ public class User {
         //TO DO this method
     }
 
+    public void seeList(){ //Need to check if it actually works
+        for(Task task: tasks){
+            System.out.println(task);
+        }
+    }
+
     public void saveTask(String name){
         String text = "";
         try(FileWriter fw = new FileWriter("TaskList" + name)){

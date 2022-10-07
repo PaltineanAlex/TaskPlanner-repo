@@ -37,11 +37,11 @@ public class User {
         tasks.add(answer);
     }
 
-    public void removeTask(){
+    public void removeTask(){ //Make this method work
         Scanner in = new Scanner(System.in);
         System.out.println("Which task do you want to remove?(Task count starts form 0)");
         int taskNumber = in.nextInt();
-        tasks.remove(task);
+        tasks.remove(taskNumber);
     }
 
     public void seeList(){
@@ -56,7 +56,7 @@ public class User {
     }
 
     public void saveTask(){
-        try(PrintWriter pw = new PrintWriter(new FileWriter("ListTask.txt"))){
+        try(PrintWriter pw = new PrintWriter(new FileWriter("ListTask.txt", true))){
             for(String task : tasks){
                 pw.write(task);
                 pw.println();

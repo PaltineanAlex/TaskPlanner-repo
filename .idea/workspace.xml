@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a8b041c-3535-49ca-aed5-533edc4676b9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ListTask.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TaskPlanner/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TaskPlanner/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TaskPlanner/Task.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TaskPlanner/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TaskPlanner/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TaskPlanner/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TaskPlanner/Utils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Task.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

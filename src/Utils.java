@@ -13,7 +13,8 @@ public class Utils {
                 1. Add task
                 2. Remove task
                 3. See TaskList
-                4. Exit application""");
+                4. Exit application
+                WARNING: To save changes you need to restart the program!""");
     }
 
     public void greeting(String name){

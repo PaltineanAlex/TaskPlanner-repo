@@ -1,5 +1,4 @@
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -7,7 +6,8 @@ import java.util.Scanner;
 public class User {
     private String name;
     private int PIN;
-    private List<Task> tasks = new ArrayList<>();
+    private List<String> tasks = new ArrayList<String>();
+    private String task;
 
     public User(String name, int PIN){
         this.name = name;
@@ -32,37 +32,37 @@ public class User {
 
     public void createTask(){
         Scanner in = new Scanner(System.in);
-        System.out.printf("Task %d: ", Task.getTaskCount());
-        tasks.add(new Task(in.nextLine()));
+        System.out.print("Task: ");
+        String answer = in.nextLine();
+        tasks.add(answer);
     }
 
     public void removeTask(){
         Scanner in = new Scanner(System.in);
-        System.out.println("Which task do you want to remove?");
+        System.out.println("Which task do you want to remove?(Task count starts form 0)");
         int taskNumber = in.nextInt();
-        tasks.remove(taskNumber);
+        tasks.remove(task);
     }
 
-    public void checkTask(){
-        Scanner in = new Scanner(System.in);
-        System.out.println("Which task do you want to mark as done?");
-        int taskNumber = in.nextInt();
-        //TO DO this method
-    }
-
-    public void seeList(){ //Need to check if it actually works
-        for(Task task: tasks){
-            System.out.println(task);
+    public void seeList(){
+        try(Scanner in = new Scanner(new File("ListTask.txt"))){
+            String line = null;
+            while(in.hasNext()){
+                System.out.println(in.nextLine());
+            }
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
         }
     }
 
-    public void saveTask(String name){
-        String text = "";
-        try(FileWriter fw = new FileWriter("TaskList" + name)){
-            //TO DO saveTasks method
-        }catch(IOException e){
-            System.out.println("I have no idea.");
+    public void saveTask(){
+        try(PrintWriter pw = new PrintWriter(new FileWriter("ListTask.txt"))){
+            for(String task : tasks){
+                pw.write(task);
+                pw.println();
+            }
+        }catch(Exception e){
+            System.out.println("There is an error!");
         }
     }
-
 }

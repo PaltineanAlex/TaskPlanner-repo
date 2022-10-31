@@ -7,7 +7,7 @@ public class TaskPlanner {
         System.out.println("You have " + taskList.size() + " tasks in your list.");
         int i = 0;
         for(Task task : taskList){
-            System.out.println((i+1) +". " + task.getTaskName());
+            System.out.println((i+1) +". " + task.getTaskName() + ". Is task done: " + task.getIsDone());
             i++;
         }
     }
@@ -43,15 +43,16 @@ public class TaskPlanner {
         return true;
     }
 
-    /*public boolean isDone(Task task){
-        if(findTask(task.getTaskName()) < 0){
+    public boolean isDone(Task undoneTask, Task doneTask){
+        if(findTask(undoneTask.getTaskName()) < 0){
             System.out.println("The task that you are looking fore doesn't exist.");
             return false;
         }
 
-        taskList.set()
+        taskList.set(findTask(undoneTask.getTaskName()), doneTask);
+        System.out.println("Task marked as done successfully.");
         return true;
-    }*/
+    }
 
     public int findTask(Task task){
         return taskList.indexOf(task);

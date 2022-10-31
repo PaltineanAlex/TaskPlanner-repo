@@ -23,7 +23,7 @@ public class Main {
                 case 3 -> modifyTask();
                 case 4 -> removeTask();
                 case 5 -> findTask();
-                //case 6 -> isDone();
+                case 6 -> isDone();
                 case 7 -> wantToQuit = true;
             }
         }
@@ -34,7 +34,7 @@ public class Main {
         String name = input.nextLine();
         System.out.println("Enter a short description: ");
         String taskDescription = input.nextLine();
-        Task newTask = new Task(name, taskDescription);
+        Task newTask = new Task(name, taskDescription, "No");
         tasks.addTask(newTask);
     }
 
@@ -51,7 +51,7 @@ public class Main {
         String newTaskName = input.nextLine();
         System.out.println("Enter a short description: ");
         String newTaskDescription = input.nextLine();
-        Task modifiedTask = new Task(newTaskName, newTaskDescription);
+        Task modifiedTask = new Task(newTaskName, newTaskDescription, "No");
         tasks.modifyTask(existingTask, modifiedTask);
     }
 
@@ -77,6 +77,16 @@ public class Main {
         System.out.println("The task: " + existingTask.getTaskName() + " has been found with the description: " + existingTask.getTaskDescription());
     }
 
+    public static void isDone(){
+        System.out.println("Enter the name of the task you want to mark as done: ");
+        String name = input.nextLine();
+        Task existingTask = tasks.queryTask(name);
+        if(existingTask == null){
+            System.out.println("Task not found in list. ");
+            return;
+        }
 
-
+        Task doneTask = new Task(existingTask.getTaskName(), existingTask.getTaskDescription(), "Yes");
+        tasks.modifyTask(existingTask, doneTask);
+    }
 }

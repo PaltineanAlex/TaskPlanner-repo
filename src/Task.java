@@ -2,9 +2,12 @@ public class Task {
     private String taskName;
     private String taskDescription;
 
-    public Task(String taskName, String taskDescription) {
+    private String isDone;
+
+    public Task(String taskName, String taskDescription, String isDone) {
         this.taskName = taskName;
         this.taskDescription = taskDescription;
+        this.isDone = isDone;
     }
 
     public String getTaskName() {
@@ -13,5 +16,9 @@ public class Task {
 
     public String getTaskDescription() {
         return taskDescription;
+    }
+
+    public String getIsDone() {
+        return isDone;
     }
 }

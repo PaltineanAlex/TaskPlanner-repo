@@ -7,7 +7,7 @@ public class TaskPlanner {
         System.out.println("You have " + taskList.size() + " tasks in your list.");
         int i = 0;
         for(Task task : taskList){
-            System.out.println((i+1) +". " + task.getTaskName() + ". Is task done: " + task.getIsDone());
+            System.out.println((i+1) +". " + task.getTaskName() + ". Is task done? " + task.getIsDone());
             i++;
         }
     }

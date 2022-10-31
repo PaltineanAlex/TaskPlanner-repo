@@ -49,16 +49,16 @@ public class TaskPlanner {
             return false;
         }
 
-        taskList.set(findTask(undoneTask.getTaskName()), doneTask);
+        taskList.set(findTask(undoneTask), doneTask);
         System.out.println("Task marked as done successfully.");
         return true;
     }
 
-    public int findTask(Task task){
+    private int findTask(Task task){
         return taskList.indexOf(task);
     }
 
-    public int findTask(String taskName){
+    private int findTask(String taskName){
         for(int i = 0; i < taskList.size(); i++){
             Task task = taskList.get(i);
             if(task.getTaskName().equals(taskName)){

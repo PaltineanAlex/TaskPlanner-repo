@@ -1,4 +1,3 @@
-import javax.sound.midi.Soundbank;
 import java.util.ArrayList;
 
 public class TaskPlanner {
@@ -8,7 +7,7 @@ public class TaskPlanner {
         System.out.println("You have " + taskList.size() + " tasks in your list.");
         int i = 0;
         for(Task task : taskList){
-            System.out.println((i+1) +". " + task.getTaskName() + ": " + task.getTaskDescription());
+            System.out.println((i+1) +". " + task.getTaskName());
             i++;
         }
     }
@@ -44,7 +43,15 @@ public class TaskPlanner {
         return true;
     }
 
+    /*public boolean isDone(Task task){
+        if(findTask(task.getTaskName()) < 0){
+            System.out.println("The task that you are looking fore doesn't exist.");
+            return false;
+        }
 
+        taskList.set()
+        return true;
+    }*/
 
     public int findTask(Task task){
         return taskList.indexOf(task);
@@ -58,5 +65,12 @@ public class TaskPlanner {
             }
         }
         return -1;
+    }
+
+    public Task queryTask(String taskName){
+        if(findTask(taskName) >= 0){
+            return taskList.get(findTask(taskName));
+        }
+        return null;
     }
 }

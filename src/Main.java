@@ -87,6 +87,6 @@ public class Main {
         }
 
         Task doneTask = new Task(existingTask.getTaskName(), existingTask.getTaskDescription(), "Yes");
-        tasks.modifyTask(existingTask, doneTask);
+        tasks.isDone(existingTask, doneTask);
     }
 }

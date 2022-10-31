@@ -10,14 +10,11 @@ public class Utils {
     public void optionPrompt(){
         System.out.println("""
                 What action do you want to do?
-                1. Add task
-                2. Remove task
-                3. See TaskList
+                0. Print the option menu
+                1. Print Task list
+                2. Add task
+                3. Remove task
                 4. Exit application
-                WARNING: To save changes you need to restart the program!""");
-    }
-
-    public void greeting(String name){
-        System.out.printf("Hello, %s. I hope you're having a great day so far!%n", name);
+                """);
     }
 }
